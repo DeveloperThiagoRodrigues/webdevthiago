@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #ededed;
+    background: #0a0a1f;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Partículas leves de fundo (tech vibe) */
+.particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(0, 238, 255, 0.5);
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(0, 238, 255, 0.7);
+    animation: float 18s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(110vh) scale(0.3); opacity: 0; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.7; }
+    100% { transform: translateY(-30vh) scale(0.5); opacity: 0; }
+}
+
+header.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background: rgba(10, 10, 31, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 238, 255, 0.12);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0ef;
+    text-decoration: none;
+}
+
+.navbar a {
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: 0.4s;
+}
+
+.navbar a:hover {
+    color: #0ef;
+    text-shadow: 0 0 12px #0ef;
+}
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    z-index: 1;
+    background: linear-gradient(135deg, #0a001f 0%, #001a33 100%);
+}
+
+.home-content {
+    max-width: 620px;
+    z-index: 2;
+}
+
+.home-content h3 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #c7d2fe;
+    margin-bottom: 8px;
+}
+
+.typing-wrapper {
+    overflow: hidden;
+    border-right: 0.18em solid #0ef;
+    white-space: nowrap;
+    font-size: 58px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00f7ff, #c084fc, #0ef);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: typing 5s steps(32) infinite, blink 0.9s step-end infinite;
+}
+
+@keyframes typing {
+    0%, 100% { width: 0; }
+    50% { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #0ef; }
+}
+
+.home-content h3.prof {
+    font-size: 34px;
+    color: #0ef;
+    margin: 15px 0 25px;
+}
+
+.home-content p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #c7d2fe;
+    margin-bottom: 40px;
+}
+
+/* Foto com neon dinâmico */
+.profile-circle {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    flex-shrink: 0;
+    transition: transform 0.6s ease;
+}
+
+.profile-circle:hover {
+    transform: scale(1.12);
+}
+
+.outer-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+        #0ef 0deg, #00f7ff 60deg, #c084fc 120deg, #a78bfa 180deg,
+        #60a5fa 240deg, #0ef 300deg, #00f7ff 360deg
+    );
+    animation: rotate 14s linear infinite, hueShift 8s ease-in-out infinite alternate;
+    filter: blur(12px);
+    opacity: 0.9;
+    box-shadow: 0 0 50px rgba(0, 238, 255, 0.7);
+}
+
+.inner-circle {
+    position: absolute;
+    inset: 14px;
+    background: #0a0a1f;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 40px rgba(0, 238, 255, 0.5);
+    animation: pulseColor 6s ease-in-out infinite;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.8s ease;
+}
+
+.profile-circle:hover .profile-img {
+    transform: scale(1.18);
+}
+
+.profile-circle:hover .outer-glow {
+    animation-duration: 10s;
+    filter: blur(16px);
+    opacity: 1;
+}
+
+.profile-circle:hover .inner-circle {
+    box-shadow: inset 0 0 70px rgba(192, 132, 252, 0.8), 0 0 60px rgba(0, 238, 255, 0.9);
+}
+
+@keyframes rotate { 100% { transform: rotate(360deg); } }
+@keyframes hueShift { 0% { filter: hue-rotate(0deg) brightness(1); } 50% { filter: hue-rotate(60deg) brightness(1.2); } 100% { filter: hue-rotate(120deg) brightness(1); } }
+@keyframes pulseColor {
+    0%, 100% { box-shadow: inset 0 0 40px rgba(0, 238, 255, 0.5), inset 0 0 20px rgba(192, 132, 252, 0.3); }
+    50% { box-shadow: inset 0 0 70px rgba(0, 247, 255, 0.8), inset 0 0 40px rgba(192, 132, 252, 0.6); }
+}
+
+/* Seções */
+.sobre, .portfolio, .contato {
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #001a33 0%, #0a001f 100%);
+    text-align: center;
+}
+
+.sobre-content, .portfolio-content, .contato-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #0ef, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sobre p, .portfolio p, .contato p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #c7d2fe;
+}
+
+/* Portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolio-card {
+    background: rgba(20, 20, 60, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 238, 255, 0.2);
+    border-radius: 20px;
+    padding: 0 0 25px 0;
+    text-decoration: none;
+    color: #e0e0ff;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: #0ef;
+    box-shadow: 0 15px 30px rgba(0, 238, 255, 0.3);
+}
+
+.portfolio-card i {
+    font-size: 80px;
+    color: #0ef;
+    margin: 40px auto 20px;
+    display: block;
+}
+
+.portfolio-card h3 {
+    font-size: 24px;
+    margin: 0 20px 10px;
+}
+
+.portfolio-card p {
+    font-size: 16px;
+    opacity: 0.85;
+    margin: 0 20px 15px;
+}
+
+/* Destaque Dev Tênis */
+.project-highlight {
+    border: 1px solid #00ffff;
+    background: linear-gradient(135deg, rgba(0, 238, 255, 0.12), rgba(192, 132, 252, 0.12));
+}
+
+.project-highlight:hover {
+    border-color: #ff0044;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.5), 0 0 80px rgba(255, 0, 68, 0.3);
+}
+
+.project-thumb {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #0a0a1f;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.4));
+}
+
+.portfolio-card:hover .project-thumb {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 30px #00ffff) brightness(1.15);
+}
+
+.portfolio-card small {
+    display: block;
+    margin: 0 20px;
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: right;
+}
+
+/* Estilo para card que abre demo (Chatbot) */
+.chatbot-demo-trigger {
+    border: 1px solid #c084fc;
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.12), rgba(0, 238, 255, 0.12));
+}
+
+.chatbot-demo-trigger:hover {
+    border-color: #c084fc;
+    box-shadow: 0 0 40px rgba(192, 132, 252, 0.5);
+}
+
+/* Demo Chatbot */
+.chatbot-demo {
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(20, 20, 60, 0.6);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 238, 255, 0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chatbot-demo h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.demo-subtitle {
+    font-size: 1.2rem;
+    color: #c7d2fe;
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.close-demo-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #ff0044;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-demo-btn:hover {
+    background: #ff3366;
+    transform: translateY(-3px);
+}
+
+/* Chatbot Container - visual bonito e elegante */
+.chatbot-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(20, 20, 60, 0.85);
+    backdrop-filter: blur(15px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 238, 255, 0.3);
+    border: 1px solid rgba(0, 238, 255, 0.4);
+}
+
+.chat-header {
+    background: linear-gradient(90deg, #0ef, #c084fc);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.bot-avatar {
+    width: 54px;
+    height: 54px;
+    background: #0a0a1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #fff;
+}
+
+.bot-info h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #0a0a1f;
+}
+
+.bot-info span {
+    font-size: 0.9rem;
+    color: #0a0a1f;
+    opacity: 0.9;
+}
+
+.chat-body {
+    height: 420px;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: linear-gradient(to bottom, rgba(10, 10, 31, 0.9), rgba(20, 20, 60, 0.7));
+}
+
+.message {
+    max-width: 82%;
+    padding: 14px 20px;
+    border-radius: 22px;
+    line-height: 1.6;
+    font-size: 1rem;
+    animation: fadeIn 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.user-message {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #0ef, #00f7ff);
+    color: #0a0a1f;
+    border-bottom-right-radius: 6px;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: rgba(192, 132, 252, 0.22);
+    border: 1px solid rgba(192, 132, 252, 0.5);
+    color: #e0e0ff;
+    border-bottom-left-radius: 6px;
+    box-shadow: 0 0 15px rgba(192, 132, 252, 0.3);
+}
+
+.typing-indicator {
+    display: flex;
+    gap: 8px;
+    padding: 14px 20px;
+    background: rgba(192, 132, 252, 0.18);
+    border-radius: 22px;
+    width: fit-content;
+    border: 1px solid rgba(192, 132, 252, 0.4);
+}
+
+.typing-dot {
+    width: 9px;
+    height: 9px;
+    background: #c084fc;
+    border-radius: 50%;
+    animation: typingBounce 1.3s infinite;
+}
+
+/* Destaque para cards especiais (Dev Tênis e K Delícias) */
+.project-highlight {
+    border: 1px solid #c084fc; /* roxo/neon para variar do ciano */
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.12), rgba(0, 238, 255, 0.08));
+}
+
+.project-highlight:hover {
+    border-color: #ff69b4; /* pink quente para comida */
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.4), 0 0 80px rgba(192, 132, 252, 0.3);
+    background: linear-gradient(135deg, rgba(192, 132, 252, 0.25), rgba(255, 105, 180, 0.15));
+}
+
+/* Thumb genérica para K Delícias */
+.project-thumb {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* mudou para cover para ficar mais bonito em fotos de comida */
+    background: #0a0a1f;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0 0 15px rgba(192, 132, 252, 0.4));
+}
+
+.portfolio-card:hover .project-thumb {
+    transform: scale(1.08);
+    filter: brightness(1.15) drop-shadow(0 0 30px #ff69b4);
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.25s; }
+.typing-dot:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes typingBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.chat-footer {
+    display: flex;
+    padding: 18px;
+    background: rgba(10, 10, 31, 0.9);
+    border-top: 1px solid rgba(0, 238, 255, 0.2);
+}
+
+#userInput {
+    flex: 1;
+    padding: 16px 22px;
+    border: 1px solid rgba(0, 238, 255, 0.4);
+    border-radius: 35px;
+    background: rgba(20, 20, 60, 0.7);
+    color: white;
+    font-size: 1.05rem;
+}
+
+#sendBtn {
+    margin-left: 12px;
+    width: 54px;
+    height: 54px;
+    background: linear-gradient(135deg, #0ef, #00f7ff);
+    border: none;
+    border-radius: 50%;
+    color: #0a0a1f;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+}
+
+#sendBtn:hover {
+    background: linear-gradient(135deg, #00f7ff, #0ef);
+    transform: scale(1.12);
+    box-shadow: 0 0 30px rgba(0, 238, 255, 0.8);
+}
+
+.demo-note {
+    font-size: 1.1rem;
+    color: #c7d2fe;
+    margin-top: 20px;
+}
+
+.demo-note a {
+    color: #0ef;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Animação fade-in mensagens */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll suave no chat */
+.chat-body::-webkit-scrollbar {
+    width: 6px;
+}
+.chat-body::-webkit-scrollbar-thumb {
+    background: #0ef;
+    border-radius: 10px;
+}
+
+/* Contato */
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.contato input, .contato textarea {
+    padding: 15px;
+    border: 1px solid rgba(0, 238, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(20, 20, 60, 0.6);
+    color: #fff;
+    font-size: 16px;
+}
+
+.contato button {
+    padding: 15px;
+    background: #0ef;
+    border: none;
+    border-radius: 8px;
+    color: #0a0a1f;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contato button:hover {
+    background: #00f7ff;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #0ef;
+    transition: 0.3s;
+}
+
+.social-icons a[href*="wa.me"] {
+    color: #25D366;
+}
+
+.social-icons a[href*="wa.me"]:hover {
+    color: #128C7E;
+    transform: scale(1.3);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .home { flex-direction: column; text-align: center; padding: 140px 6% 80px; }
+    .profile-circle { margin: 50px auto 0; width: 280px; height: 280px; }
+    .typing-wrapper { font-size: 48px; }
+    .home-content h3, .home-content h3.prof { font-size: 28px; }
+    .sobre, .portfolio, .contato { padding: 80px 6%; }
+    h2 { font-size: 38px; }
+    .project-thumb { height: 160px; }
+    .chatbot-demo { padding: 30px 15px; }
+    .chat-body { height: 350px; }
+}

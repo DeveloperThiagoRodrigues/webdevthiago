@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Karpovicz Rodrigues | Web Designer & Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Partículas de fundo -->
+    <div class="particles" id="particles"></div>
+
+    <header class="header">
+        <a href="#home" class="logo">Thiago K. Rodrigues</a>
+        <nav class="navbar">
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home" class="home">
+        <div class="home-content">
+            <h3>Olá, eu sou o</h3>
+            <div class="typing-wrapper">Thiago Karpovicz Rodrigues</div>
+            <h3 class="prof">e eu sou Web Designer & Full-Stack Dev</h3>
+            <p>Com anos de experiência criando websites impactantes. Especialista em Front-End moderno, Back-End robusto e UI/UX que converte. Explore meu portfólio!</p>
+        </div>
+
+        <div class="profile-circle">
+            <div class="outer-glow"></div>
+            <div class="inner-circle">
+                <img src="assets/DEV.jpg" alt="Thiago Karpovicz Rodrigues" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="sobre-content">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou Thiago Karpovicz Rodrigues, um profissional em plena migração de carreira. Comecei como locutor de rádio e eventos, onde aprendi a cativar audiências com narrativas envolventes e comunicação clara. Essa experiência me ensinou a importância de uma presença impactante e persuasiva, habilidades que agora aplico no mundo digital.</p>
+            <p>Hoje, sou um desenvolvedor full-stack apaixonado por tecnologia, com foco em criar soluções web que transformam marcas e empresas. Meu objetivo principal é ajudar negócios a elevarem seu visual online, tornando sites e aplicativos mais chamativos, intuitivos e interessantes para o público. Utilizo ferramentas modernas como HTML5, CSS3, JavaScript, React para front-end, Node.js e Express para back-end, além de bancos de dados como MongoDB e SQL.</p>
+            <p>Recentemente, mergulhei no universo da inteligência artificial, integrando IA para automatizar e agilizar processos, especialmente em atendimento ao cliente. Com chatbots inteligentes e sistemas de automação baseados em modelos como GPT e ferramentas de machine learning, ajudo empresas a otimizarem respostas rápidas, personalizadas e eficientes, reduzindo custos e melhorando a experiência do usuário. Minha jornada é sobre conectar criatividade com inovação técnica, sempre visando resultados que impulsionam o crescimento dos meus clientes.</p>
+            <p>Estou baseado em Jacutinga, MG, e pronto para novos desafios. Vamos criar algo incrível juntos?</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="portfolio-content">
+            <h2>Portfólio</h2>
+            <p>Confira alguns dos meus projetos recentes. Clique nos cards para ver detalhes ou demos.</p>
+            <div class="portfolio-grid">
+
+                <!-- Card Dev Tênis -->
+                <a href="https://devtenis.netlify.app/" target="_blank" class="portfolio-card project-highlight">
+                    <img src="assets/02.png" alt="Dev Tênis - Air Max TN Showcase" class="project-thumb">
+                    <h3>Dev Tênis - Air Max TN Showcase</h3>
+                    <p>Site interativo com design cyberpunk/neon: glow pulsante no tênis, partículas flutuantes, troca dinâmica de modelos e experiência imersiva para e-commerce de sneakers.</p>
+                    <small>Demo ao vivo →</small>
+                </a>
+
+                <!-- Card Chatbot IA - abre demo interativa -->
+                <div class="portfolio-card chatbot-demo-trigger">
+                    <i class="fas fa-robot"></i>
+                    <h3>Projeto 2 - Chatbot IA para Atendimento</h3>
+                    <p>Integração de IA para automação inteligente. Clique para ver uma simulação real de atendimento em tempo real.</p>
+                    <small>Ver demo interativa ↓</small>
+                </div>
+
+                <!-- Novo Card K Delícias -->
+                <a href="https://kdelicias.netlify.app/#home" target="_blank" class="portfolio-card project-highlight">
+                    <img src="assets/bolo.png" alt="K Delícias - Doces e Sobremesas" class="project-thumb">
+                    <h3>K Delícias - Doces que Encantam</h3>
+                    <p>Landing page irresistível para confeitaria premium: design apetitoso, animações suaves, paleta de cores doce e chamativa, seções de produtos com hover magnético e call-to-action que converte. Feito para fazer o cliente salivar e comprar na hora!</p>
+                    <small>Demo ao vivo →</small>
+                </a>
+
+                
+
+                <!-- Card genérico (pode remover ou substituir) -->
+                <a href="https://seu-projeto3.netlify.app" target="_blank" class="portfolio-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Projeto 3 - Landing Page Chamativa</h3>
+                    <p>Design neon e interativo. (Adicione seu link Netlify aqui)</p>
+                </a>
+
+            </div>
+
+            <!-- Demo do Chatbot (escondida inicialmente) -->
+            <div id="chatbotDemo" class="chatbot-demo hidden">
+                <h3>Demo Interativa: Chatbot IA atendendo um cliente</h3>
+                <p class="demo-subtitle">Converse como se fosse um cliente interessado em contratar o serviço. Veja como respondo de forma inteligente e focada em venda.</p>
+
+                <div class="chatbot-container">
+                    <div class="chat-header">
+                        <div class="bot-avatar"><i class="fas fa-robot"></i></div>
+                        <div class="bot-info">
+                            <h3>Assistente IA - Thiago Karpovicz</h3>
+                            <span>Online agora • Respostas instantâneas</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-body" id="chatBody"></div>
+
+                    <div class="chat-footer">
+                        <input type="text" id="userInput" placeholder="Digite sua mensagem aqui..." autocomplete="off">
+                        <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <p class="demo-note">Essa simulação mostra exatamente o que entrego: atendimento automático 24/7 que qualifica leads e vende de forma natural. Quer um para o seu negócio? <a href="#contato">Fale comigo agora</a>!</p>
+
+                <button id="closeDemo" class="close-demo-btn">Fechar Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <div class="contato-content">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo para discutirmos seu projeto!</p>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://wa.me/5519996982524?text=Olá%20Thiago,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto!" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/seu-usuario" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:onlinedigitalnegocios@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
