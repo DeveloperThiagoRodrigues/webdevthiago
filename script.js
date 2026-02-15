@@ -92,3 +92,41 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter') sendMessage();
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMessage');
+
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // impede reload da página
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Mostra mensagem de sucesso
+                    successMsg.classList.remove('hidden');
+                    form.reset(); // limpa o formulário
+
+                    // Esconde mensagem após 8 segundos (opcional)
+                    setTimeout(() => {
+                        successMsg.classList.add('hidden');
+                    }, 8000);
+                } else {
+                    alert('Ocorreu um erro ao enviar. Tente novamente ou use o WhatsApp.');
+                }
+            } catch (error) {
+                alert('Erro de conexão. Tente novamente.');
+            }
+        });
+    }
+});

@@ -490,6 +490,30 @@ h2 {
 .typing-dot:nth-child(2) { animation-delay: 0.25s; }
 .typing-dot:nth-child(3) { animation-delay: 0.5s; }
 
+.success-message {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 238, 255, 0.15);
+    border: 1px solid #0ef;
+    border-radius: 12px;
+    color: #0ef;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    animation: fadeIn 0.6s ease;
+}
+
+.success-message i {
+    font-size: 2rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
 @keyframes typingBounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
