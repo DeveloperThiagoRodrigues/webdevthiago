@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAFÉ NOIR — Onde o tempo para</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<!-- LOADER -->
+<div id="loader">
+    <div class="loader-logo">Café Noir</div>
+    <div class="loader-bar">
+        <div class="loader-fill"></div>
+    </div>
+    <p class="loader-txt">Preparando seu café...</p>
+</div>
+
+<!-- CURSOR -->
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<canvas id="cv"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+    <a href="#" class="nav-logo">Café Noir</a>
+    <ul class="nav-links">
+        <li><a href="#story">Nossa História</a></li>
+        <li><a href="#menu">Cardápio</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#gallery">Galeria</a></li>
+        <li><a href="#location">Localização</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta"><span>Reservar Mesa</span></a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-tag">Est. 2019 &nbsp;·&nbsp; São Paulo</div>
+        <h1 class="hero-title">
+            <span class="t1">Café</span>
+            <span class="t2">Noir</span>
+            <span class="t3">onde o tempo para</span>
+        </h1>
+        <p class="hero-sub">Specialty coffee &nbsp;·&nbsp; Grãos de origem única &nbsp;·&nbsp; Alma brasileira</p>
+        <div class="hero-actions">
+            <a href="#menu" class="btn btn-fill"><span>Ver Cardápio</span></a>
+            <a href="#story" class="btn btn-ghost">Nossa História</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span class="hero-scroll-txt">scroll</span>
+        <div class="hero-scroll-line"></div>
+    </div>
+</section>
+
+<!-- NUMBERS -->
+<div class="numbers-band">
+    <div class="num-item rv"><span class="num-val" data-count="47">0</span><span class="num-lbl">Blends Únicos</span>
+    </div>
+    <div class="num-item rv rv-d1"><span class="num-val" data-count="12">0</span><span class="num-lbl">Produtores
+            Parceiros</span></div>
+    <div class="num-item rv rv-d2"><span class="num-val" data-count="98">0</span><span class="num-lbl">Mil Xícaras
+            Servidas</span></div>
+    <div class="num-item rv rv-d3"><span class="num-val" data-count="5">0</span><span class="num-lbl">Prêmios
+            Nacionais</span></div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+    <div class="marquee-track">
+        <span>Single Origin</span><span class="sep"> ✦ </span><span>Torra Artesanal</span><span class="sep"> ✦
+        </span><span>Baristas Certificados</span><span class="sep"> ✦ </span><span>Cold Brew 48h</span><span
+            class="sep"> ✦ </span><span>Grãos Especiais</span><span class="sep"> ✦ </span><span>Música ao
+            Vivo</span><span class="sep"> ✦ </span><span>100% Sustentável</span><span class="sep"> ✦ </span><span>Latte
+            Art Premium</span><span class="sep"> ✦ </span>
+        <span>Single Origin</span><span class="sep"> ✦ </span><span>Torra Artesanal</span><span class="sep"> ✦
+        </span><span>Baristas Certificados</span><span class="sep"> ✦ </span><span>Cold Brew 48h</span><span
+            class="sep"> ✦ </span><span>Grãos Especiais</span><span class="sep"> ✦ </span><span>Música ao
+            Vivo</span><span class="sep"> ✦ </span><span>100% Sustentável</span><span class="sep"> ✦ </span><span>Latte
+            Art Premium</span><span class="sep"> ✦ </span>
+    </div>
+</div>
+
+<!-- STORY -->
+<section id="story">
+    <div class="story-inner">
+        <div class="story-img-col rv-left">
+            <div class="story-badge">
+                <div class="story-badge-icon">☕</div>
+                <div class="story-badge-ring">Specialty · Premium · Artisan ·&nbsp;</div>
+            </div>
+            <div class="story-img-main">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=88" alt="Barista em ação"
+                    loading="lazy">
+            </div>
+            <div class="story-img-accent">
+                <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&q=85" alt="Grãos de café"
+                    loading="lazy">
+            </div>
+        </div>
+        <div>
+            <div class="eyebrow rv">Nossa Essência</div>
+            <h2 class="story-h rv rv-d1">Nascemos do amor<br>por um bom <em>café</em></h2>
+            <p class="story-p rv rv-d2">Cada grão que chega aqui passa por um processo rigoroso de seleção. Trabalhamos
+                com pequenos produtores brasileiros que cultivam o café com o cuidado de quem planta uma história.</p>
+            <p class="story-p rv rv-d3">O resultado é mais do que uma bebida. É um ritual. Uma pausa. Um momento onde o
+                mundo externo se aquieta e você existe, inteiramente presente, num único e perfeito gole.</p>
+            <div class="story-divider rv rv-d3"></div>
+            <div class="story-sig rv rv-d4">Carlos Mendes</div>
+            <p style="font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.25em;color:var(--caramel);text-transform:uppercase;margin-top:.4rem"
+                class="rv rv-d4">Head Barista &amp; Fundador</p>
+        </div>
+    </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+    <div class="sec-hd rv">
+        <div class="eyebrow">O que servimos</div>
+        <h2 class="sec-h">Cardápio de <em>Sensações</em></h2>
+        <p class="sec-sub">Cada item, cuidadosamente composto para você</p>
+    </div>
+    <div class="menu-tabs rv rv-d1">
+        <button class="tab active">Quente</button>
+        <button class="tab">Gelado</button>
+        <button class="tab">Especiais</button>
+    </div>
+    <div class="menu-grid">
+        <div class="menu-card rv">
+            <div class="menu-badge">Clássico</div>
+            <div class="menu-card-img"><img
+                    src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600&q=82" alt="Espresso"
+                    loading="lazy">
+                <div class="menu-card-fade"></div>
+            </div>
+            <div class="menu-card-body">
+                <span class="menu-card-tag">☕ Espresso</span>
+                <h3 class="menu-card-name">Espresso Puro</h3>
+                <p class="menu-card-desc">A alma destilada do café. 30ml de intensidade que acorda cada sentido do seu
+                    ser.</p>
+                <div class="menu-card-footer"><span class="menu-card-price">R$ 9,00</span><button
+                        class="menu-card-btn">Pedir</button></div>
+            </div>
+        </div>
+        <div class="menu-card rv rv-d1">
+            <div class="menu-badge">Popular</div>
+            <div class="menu-card-img"><img
+                    src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600&q=82" alt="Flat White"
+                    loading="lazy">
+                <div class="menu-card-fade"></div>
+            </div>
+            <div class="menu-card-body">
+                <span class="menu-card-tag">🥛 Milk Coffee</span>
+                <h3 class="menu-card-name">Flat White</h3>
+                <p class="menu-card-desc">Dois shots de espresso fundidos com microespuma cremosa. Veludo em forma de
+                    líquido.</p>
+                <div class="menu-card-footer"><span class="menu-card-price">R$ 16,00</span><button
+                        class="menu-card-btn">Pedir</button></div>
+            </div>
+        </div>
+        <div class="menu-card rv rv-d2">
+            <div class="menu-card-img"><img
+                    src="https://www.folgerscoffee.com/folgers/recipes/_Hero%20Images/Detail%20Pages/5596/image-thumb__5596__schema_image/CaramelMacchiato-hero.1fb90577.jpg" alt="Caramel"
+                    loading="lazy">
+                <div class="menu-card-fade"></div>
+            </div>
+            <div class="menu-card-body">
+                <span class="menu-card-tag">🍯 Signature</span>
+                <h3 class="menu-card-name">Caramel Macchiato</h3>
+                <p class="menu-card-desc">Leite vaporizado, espresso marcado no topo e um fio de caramelo artesanal.
+                    Poesia líquida.</p>
+                <div class="menu-card-footer"><span class="menu-card-price">R$ 22,00</span><button
+                        class="menu-card-btn">Pedir</button></div>
+            </div>
+        </div>
+        <div class="menu-card rv rv-d3">
+            <div class="menu-badge">Novidade</div>
+            <div class="menu-card-img"><img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=82" alt="Cold Brew"
+                    loading="lazy">
+                <div class="menu-card-fade"></div>
+            </div>
+            <div class="menu-card-body">
+                <span class="menu-card-tag">🧊 Cold Brew</span>
+                <h3 class="menu-card-name">Cold Brew Noir</h3>
+                <p class="menu-card-desc">48h de infusão a frio. Naturalmente doce, incrivelmente suave, perigosamente
+                    viciante.</p>
+                <div class="menu-card-footer"><span class="menu-card-price">R$ 19,00</span><button
+                        class="menu-card-btn">Pedir</button></div>
+            </div>
+        </div>
+        <div class="menu-card rv rv-d4">
+            <div class="menu-card-img"><img
+                    src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=82" alt="Mocha"
+                    loading="lazy">
+                <div class="menu-card-fade"></div>
+            </div>
+            <div class="menu-card-body">
+                <span class="menu-card-tag">🍫 Chocolate</span>
+                <h3 class="menu-card-name">Noir Mocha</h3>
+                <p class="menu-card-desc">Chocolate belga 70% cacau encontra nosso espresso signature. Pecado delicioso.
+                </p>
+                <div class="menu-card-footer"><span class="menu-card-price">R$ 24,00</span><button
+                        class="menu-card-btn">Pedir</button></div>
+            </div>
+        </div>
+        <div class="menu-card rv rv-d5">
+            <div class="menu-badge">Exclusivo</div>
+            <div class="menu-card-img"><img
+                    src="https://images.ctfassets.net/v601h1fyjgba/361i0FpYtJ6e2CnMcw8uCF/b05ab2d40969a3f509278282e5473e06/LS_IMG_IST_Lavender_Latte_Hi.jpg" alt="Lavender"
+                    loading="lazy">
+                <div class="menu-card-fade"></div>
+            </div>
+            <div class="menu-card-body">
+                <span class="menu-card-tag">🌸 Floral</span>
+                <h3 class="menu-card-name">Lavender Latte</h3>
+                <p class="menu-card-desc">Xarope de lavanda artesanal, leite de aveia e espresso. Experiência floral
+                    única.</p>
+                <div class="menu-card-footer"><span class="menu-card-price">R$ 26,00</span><button
+                        class="menu-card-btn">Pedir</button></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FULL PHOTO QUOTE -->
+<div class="full-photo">
+    <img class="full-photo-img" id="parallaxImg"
+        src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1800&q=80" alt="Café atmosphere"
+        loading="lazy">
+    <div class="full-photo-overlay">
+        <div class="full-photo-text rv">
+            <blockquote>O café não é apenas uma bebida. É um <em>ritual de presença</em>, uma pausa que transforma o dia
+                comum em algo que vale lembrar.</blockquote>
+            <cite>Carlos Mendes — Head Barista, Café Noir</cite>
+        </div>
+    </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="exp-inner">
+        <div class="sec-hd rv" style="padding:0">
+            <div class="eyebrow">O que nos torna únicos</div>
+            <h2 class="sec-h">A <em>Experiência</em></h2>
+        </div>
+        <div class="exp-grid">
+            <div class="exp-card rv rv-d1">
+                <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=82" alt="Grãos"
+                    loading="lazy">
+                <div class="exp-card-overlay">
+                    <span class="exp-num">01</span>
+                    <div class="exp-icon">🫘</div>
+                    <h3 class="exp-name">Torra Artesanal</h3>
+                    <p class="exp-desc">Grãos torrados em pequenos lotes toda semana para máxima frescura e complexidade
+                        de sabor inigualável.</p>
+                </div>
+            </div>
+            <div class="exp-card rv rv-d2">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&q=82" alt="Barista"
+                    loading="lazy">
+                <div class="exp-card-overlay">
+                    <span class="exp-num">02</span>
+                    <div class="exp-icon">🏆</div>
+                    <h3 class="exp-name">Baristas Campeões</h3>
+                    <p class="exp-desc">Nossa equipe compete e vence em campeonatos nacionais de barismo. A excelência
+                        no copo é nossa obsessão.</p>
+                </div>
+            </div>
+            <div class="exp-card rv rv-d3">
+                <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=82" alt="Espaço"
+                    loading="lazy">
+                <div class="exp-card-overlay">
+                    <span class="exp-num">03</span>
+                    <div class="exp-icon">🌿</div>
+                    <h3 class="exp-name">100% Sustentável</h3>
+                    <p class="exp-desc">Energia solar, embalagens compostáveis e borra de café transformada em adubo
+                        orgânico para os produtores.</p>
+                </div>
+            </div>
+            <div class="exp-card rv rv-d4">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=82" alt="Atmosfera"
+                    loading="lazy">
+                <div class="exp-card-overlay">
+                    <span class="exp-num">04</span>
+                    <div class="exp-icon">🎵</div>
+                    <h3 class="exp-name">Atmosfera Curada</h3>
+                    <p class="exp-desc">Jazz, bossa nova e soul ao vivo toda sexta. Playlists selecionadas por
+                        musicólogos nos demais dias.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <div class="sec-hd rv" style="padding:0 5rem">
+        <div class="eyebrow">Nosso Espaço</div>
+        <h2 class="sec-h">Venha <em>Viver</em></h2>
+    </div>
+    <div class="gal-grid">
+        <div class="gal-item rv"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900&q=85"
+                alt="Interior" loading="lazy">
+            <div class="gal-item-overlay"><span class="gal-label">Nosso espaço acolhedor</span></div>
+        </div>
+        <div class="gal-item rv rv-d1"><img
+                src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=85" alt="Latte art"
+                loading="lazy">
+            <div class="gal-item-overlay"><span class="gal-label">Arte em cada xícara</span></div>
+        </div>
+        <div class="gal-item rv rv-d2"><img
+                src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=85" alt="Grãos"
+                loading="lazy">
+            <div class="gal-item-overlay"><span class="gal-label">Grãos selecionados</span></div>
+        </div>
+        <div class="gal-item rv rv-d3"><img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=85" alt="Barista"
+                loading="lazy">
+            <div class="gal-item-overlay"><span class="gal-label">Mestres do café</span></div>
+        </div>
+        <div class="gal-item rv rv-d4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHNxxuC3k6QfNqeKV2r7khl2wQBfXo4Hdg2A&s"
+                alt="Coffee" loading="lazy">
+            <div class="gal-item-overlay"><span class="gal-label">O ritual perfeito</span></div>
+        </div>
+        <div class="gal-item rv rv-d5"><img src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=600&q=85"
+                alt="Café" loading="lazy">
+            <div class="gal-item-overlay"><span class="gal-label">Da origem ao copo</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+    <div class="cta-inner">
+        <div class="sec-hd rv">
+            <div class="eyebrow">Reserve sua experiência</div>
+            <h2 class="sec-h">Venha nos <em>Visitar</em></h2>
+        </div>
+        <p class="cta-p rv rv-d1">Receba nossa newsletter e garante sua mesa para o próximo evento especial.</p>
+        <div class="cta-form rv rv-d2">
+            <input class="cta-input" type="email" placeholder="seu@email.com">
+            <button class="cta-btn">Reservar</button>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+    <div class="loc-inner">
+        <div>
+            <div class="eyebrow rv">Onde estamos</div>
+            <h2 class="loc-h rv rv-d1">Nos <em>encontre</em><br>no coração da cidade</h2>
+            <ul class="loc-list rv rv-d2">
+                <li>
+                    <div class="loc-icon">📍</div>
+                    <div><strong class="loc-lbl">Endereço</strong><span class="loc-val">Rua Augusta, 1200 —
+                            Consolação<br>São Paulo, SP — 01305-100</span></div>
+                </li>
+                <li>
+                    <div class="loc-icon">🕐</div>
+                    <div><strong class="loc-lbl">Horário</strong><span class="loc-val">Seg–Sex: 7h às 22h &nbsp;·&nbsp;
+                            Sáb–Dom: 8h às 23h</span></div>
+                </li>
+                <li>
+                    <div class="loc-icon">📞</div>
+                    <div><strong class="loc-lbl">Contato</strong><span class="loc-val">(11) 98765-4321 &nbsp;·&nbsp;
+                            contato@cafenoir.com.br</span></div>
+                </li>
+                <li>
+                    <div class="loc-icon">🚇</div>
+                    <div><strong class="loc-lbl">Como chegar</strong><span class="loc-val">Metrô Consolação (Linha
+                            2-Verde)<br>Estacionamento conveniado ao lado</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="rv-right">
+            <div class="loc-map">
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80" alt="São Paulo"
+                    loading="lazy">
+                <div class="loc-map-overlay">
+                    <div class="loc-pin"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div>
+            <span class="f-brand-logo">Café Noir</span>
+            <p class="f-brand-p">Onde cada gole conta uma história. Specialty coffee com alma brasileira desde 2019.</p>
+            <div class="f-social">
+                <a href="#" class="f-soc-btn">📸</a>
+                <a href="#" class="f-soc-btn">📘</a>
+                <a href="#" class="f-soc-btn">🎵</a>
+                <a href="#" class="f-soc-btn">💬</a>
+            </div>
+        </div>
+        <div class="f-col">
+            <h4>Menu</h4>
+            <ul>
+                <li><a href="#">Cafés Quentes</a></li>
+                <li><a href="#">Cafés Gelados</a></li>
+                <li><a href="#">Especiais</a></li>
+                <li><a href="#">Doces &amp; Bolos</a></li>
+            </ul>
+        </div>
+        <div class="f-col">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#">Nossa História</a></li>
+                <li><a href="#">Equipe</a></li>
+                <li><a href="#">Sustentabilidade</a></li>
+                <li><a href="#">Franquias</a></li>
+            </ul>
+        </div>
+        <div class="f-col">
+            <h4>Contato</h4>
+            <ul>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Imprensa</a></li>
+                <li><a href="#">Trabalhe Conosco</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="f-copy">© 2026 Desenvolvido por Thiago Karpovicz Rodrigues · Todos os direitos reservados</p>
+        <p class="f-tag">Onde o tempo para. Onde o sabor fala.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</html>
